@@ -5,12 +5,15 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Platform,
 } from 'react-native';
 import { colors, typography } from '../theme';
 import { Button } from '../components';
 
-export default function LoginScreen() {
+type LoginScreenProps = {
+  onAuthenticated?: () => void;
+};
+
+export default function LoginScreen({ onAuthenticated }: LoginScreenProps) {
   const [email, setEmail] = useState('');
 
   return (
@@ -42,7 +45,7 @@ export default function LoginScreen() {
 
         <View style={styles.spacer12} />
 
-        <Button label="Continue" onPress={() => {}} />
+        <Button label="Continue" onPress={() => onAuthenticated && onAuthenticated()} />
 
         <View style={styles.spacer24} />
 
@@ -55,14 +58,12 @@ export default function LoginScreen() {
         <View style={styles.spacer16} />
 
         <TouchableOpacity style={styles.oauthButton} activeOpacity={0.8}>
-          <Text style={styles.oauthEmoji}>🟦</Text>
           <Text style={styles.oauthText}>Continue with Google</Text>
         </TouchableOpacity>
 
         <View style={styles.spacer12} />
 
         <TouchableOpacity style={styles.oauthButton} activeOpacity={0.8}>
-          <Text style={styles.oauthEmoji}>{Platform.OS === 'ios' ? '' : ''}</Text>
           <Text style={styles.oauthText}>Continue with Apple</Text>
         </TouchableOpacity>
 
