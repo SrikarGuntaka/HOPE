@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>HOPE (Personalized Learning LMS)</h1>
+<h1>HOPE test (Personalized Learning LMS)</h1>
 
 <p>
   HOPE is a <strong>React Native Learning Management System (LMS)</strong> that personalizes education by simulating diverse teaching styles through 
