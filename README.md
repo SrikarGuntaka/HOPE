@@ -35,20 +35,6 @@
   <li><strong>AI/ML Integration:</strong> Google Gemini APIs</li>
 </ul>
 
-<hr>
-
-<h2>Project Structure</h2>
-<pre>
-HOPE/
- ├── frontend/         # React Native app
- ├── backend/          # Node.js + Express services
- ├── infra/            # Docker configs, deployment scripts
- ├── docs/             # Documentation & API references
- └── README.md
-</pre>
-
-<hr>
-
 <h2>Getting Started</h2>
 
 <h3>Prerequisites</h3>
